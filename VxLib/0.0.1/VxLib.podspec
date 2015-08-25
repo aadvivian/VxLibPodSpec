@@ -20,13 +20,13 @@ Pod::Spec.new do |s|
   s.summary      = "VxLib lets a user do stuff"
 
   #s.description  = <<-DESC
-#                  A longer description of VxLib in Markdown format.
-#
-#                   * Think: Why did you write this? What is the focus? What does it do?
-#                   * CocoaPods will be using this to generate tags, and improve search results.
-#                   * Try to keep it short, snappy and to the point.
-#                   * Finally, don't worry about the indent, CocoaPods strips it!
-#                   DESC
+  #                 A longer description of VxLib in Markdown format.
+
+  #                 * Think: Why did you write this? What is the focus? What does it do?
+  #                 * CocoaPods will be using this to generate tags, and improve search results.
+  #                 * Try to keep it short, snappy and to the point.
+  #                 * Finally, don't worry about the indent, CocoaPods strips it!
+  #                 DESC
 
   s.homepage     = "https://github.com/aadvivian/VxLib"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   #
 
   #s.license      = "MIT (example)"
-  s.license      = { :type => "MIT", :file => "LICENSE" }
+   s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -53,10 +53,10 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "Aadvivian Singh" => "aadvivian.singh@gmail.com" }
-  # Or just: s.author    = ""
-  # s.authors            = { "" => "" }
-  # s.social_media_url   = "http://twitter.com/"
+    s.author             = { "aadvivian" => "aadvivian.singh@gmail.com" }
+  # Or just: s.author    = "aadvivian"
+  # s.authors            = { "aadvivian" => "aadvivian.singh@gmail.com" }
+  # s.social_media_url   = "http://twitter.com/aadvivian"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
     s.platform     = :ios
-  # s.platform     = :ios, "8.0"
+  # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
     s.ios.deployment_target = "8.0"
@@ -90,9 +90,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  #s.source_files  = "Classes", "VxLib/**/*.{h,swift}"
   s.source_files  = "VxLib/**/*.{h,swift}"
-  #s.exclude_files = "Classes/Exclude"
+  s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -117,8 +116,11 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-    s.framework  = "UIKit"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  #s.framework  = "UIKit"
+   s.dependency  'Alamofire', '2.0.0-beta.1'
+   s.dependency  'CoreDataKit', '~> 0.6'
+   #s.dependency  'SwiftyJSON' 
+  #s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
@@ -134,7 +136,5 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-    s.dependency 'Alamofire', '2.0.0-beta.1'
-    s.dependency 'CoreDataKit', '~> 0.6'
 
 end
